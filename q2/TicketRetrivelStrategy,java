@@ -1,0 +1,21 @@
+package core;
+
+public interface TicketRetrievalStrategy {
+  String retrieveTicket();
+}
+PriorityRetrieval.java
+package core;
+
+public class PriorityRetrieval implements TicketRetrievalStrategy {
+  private final TicketPool ticketPool;
+
+  public PriorityRetrieval(TicketPool ticketPool) {
+    this.ticketPool = ticketPool;
+  }
+
+  @Override
+  public String retrieveTicket() {
+     // Implement logic for priority-based retrieval (simplified here) - YOU NEED TO ADD THE LOGIC
+    return ticketPool.removeTicket(); // Placeholder
+  }
+}
